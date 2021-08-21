@@ -7,8 +7,8 @@ type Handler struct {
 	http.Handler
 }
 
-// NewHandler new Handler
-func NewHandler(h http.Handler) *Handler {
+// New Handler
+func New(h http.Handler) *Handler {
 	return &Handler{h}
 }
 
