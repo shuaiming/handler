@@ -14,7 +14,7 @@ func New(h http.Handler) *Handler {
 
 // ServeHTTP implement pod.Handler
 func (h *Handler) ServeHTTP(
-	rw http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
-	h.Handler.ServeHTTP(rw, r)
-	next(rw, r)
+	w http.ResponseWriter, r *http.Request, next http.HandlerFunc) {
+	h.Handler.ServeHTTP(w, r)
+	next(w, r)
 }
